@@ -1,0 +1,24 @@
+{% extends "header.html" %} {% block content %}
+
+{% if error_msg %}
+  <b class="text-red-400">
+    {{ error_msg }}
+  </b>
+{% endif %}
+
+<div class="results-container">
+  <div class="decoration-container"><div class="decoration"></div></div>
+  {% for result in results %}
+  <a 
+    href="{{ url_for('songs.song_detail', song_id=result.track_id) }}"
+    class="group song-card"
+  >
+    <img src="{{ result.album_image_url }}" class="song-card-img" alt="missing" />
+    <h5 class="song-card-content"> {{ result.title }}
+      <span class="text-neutral-400 font-normal"> &middot; {{ result.releae_year }} </span>
+    </h5>
+  </a>
+  {% endfor %}
+</div>
+
+{% endblock %}
