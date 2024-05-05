@@ -20,8 +20,8 @@ import os
 from .client import SongClient
 
 # update with your API Key
-client_id = "f8576bd3cccf442d853261c942c0e81f"
-client_secret = "f946df74175c4864a8d0c171c802a4dd"
+client_id = os.environ.get('client_id ')
+client_secret = os.environ.get('client_secret')
 
 # do not remove these 2 lines (required for autograder to work)
 
