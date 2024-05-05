@@ -12,7 +12,6 @@ chardet==3.0.4
 charset-normalizer==2.0.12
 Click==7.0
 comm==0.2.2
-command-not-found==0.3
 contourpy==1.2.0
 cryptography==3.4.8
 cycler==0.12.1
